@@ -3,3 +3,5 @@
 
  * yarn build --mode=production
  * yarn build --mode=development
+
+me guié por el proyecto https://github.com/voerro/vue-tagsinput
