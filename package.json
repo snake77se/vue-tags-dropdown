@@ -1,5 +1,5 @@
 {
-  "name": "vue-tags",
+  "name": "@snake77se/vue-tags",
   "version": "1.0.0",
   "main": "./src/tags.js",
   "repository": "https://github.com/snake77se/vue-tags-dropdown.git",
