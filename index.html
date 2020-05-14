@@ -18,7 +18,38 @@
             <a href="https://github.com/snake77se">Snake77se</a>
           </h2>
         </div>
+        <div id="main-content-vue">
+          <!--
+            {% set availableTags = getTypeTags(entityTag)|map(t => { id: t.id, name: t.name})|json_encode %}
+                {% set baseUrl = entityTag is instanceof('App\\Entity\\Company') ? '/api/1/companies/' : '/api/1/requests/' %}
+                {% set header = entityTag is instanceof('App\\Entity\\Company') ? 'Etiquetas de la empresa' : 'Etiquetas de la solicitud' %}
+                <vue-tags
+                    header="{{ header }}"
+                    base-url="{{ baseUrl }}"
+                    available-tags="{{ availableTags }}"
+                    entity-id="{{ entityTag.id }}">
+                </vue-tags>
+           -->
+          <vue-tags
+            header="HEADER TAGS"
+            base-url="<url >"
+            available-tags="<arreglo de tags en json [{ id: number, name: string}]>"
+            entity-id="<entity.id>"
+          >
+          </vue-tags>
+        </div>
       </div>
     </section>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+  <script src="dist/vue-tags.js"></script>
+  <script>
+    // Vue-Tags
+    new Vue({
+      el: ".main-content-vue",
+      components: {
+        "vue-tags": VueTags
+      }
+    });
+  </script>
 </html>
